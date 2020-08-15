@@ -15,147 +15,129 @@ curl https://crux.pazguille.me/api/web-vitals?origins=https://reactjs.org,https:
     {
       "origin": "https://reactjs.org",
       "metrics": {
-        "FID": {
-          "histogram": [{
-            "start": 0,
-            "end": 100,
-            "density": 0.8992395437262332
-          }, {
-            "start": 100,
-            "end": 300,
-            "density": 0.049429657794676674
-          }, {
-            "start": 300,
-            "density": 0.0513307984790871
-          }],
-          "percentiles": {
-            "p75": 45
-          }
-        },
-        "LCP": {
-          "histogram": [{
-            "start": 0,
-            "end": 2500,
-            "density": 0.9036738351254479
-          }, {
-            "start": 2500,
-            "end": 4000,
-            "density": 0.0586917562724014
-          }, {
-            "start": 4000,
-            "density": 0.03763440860215059
-          }],
-          "percentiles": {
-            "p75": 1582
-          }
-        },
         "CLS": {
           "histogram": [{
             "start": "0.00",
             "end": "0.10",
-            "density": 0.9881422924901181
+            "density": 98.49
           }, {
             "start": "0.10",
             "end": "0.25",
-            "density": 0.003952569169960473
+            "density": 0.54
           }, {
             "start": "0.25",
-            "density": 0.007905138339920941
+            "density": 0.97
           }],
-          "percentiles": {
-            "p75": "0.04"
-          }
+          "value": "0.04"
         },
         "FCP": {
           "histogram": [{
             "start": 0,
             "end": 1000,
-            "density": 0.47284060552092616
+            "density": 51.55
           }, {
             "start": 1000,
             "end": 3000,
-            "density": 0.4639358860195905
+            "density": 44.2
           }, {
             "start": 3000,
-            "density": 0.06322350845948325
+            "density": 4.26
           }],
-          "percentiles": {
-            "p75": 1541
-          }
+          "value": 1404
+        },
+        "FID": {
+          "histogram": [{
+            "start": 0,
+            "end": 100,
+            "density": 90.76
+          }, {
+            "start": 100,
+            "end": 300,
+            "density": 4.99
+          }, {
+            "start": 300,
+            "density": 4.25
+          }],
+          "value": 45
+        },
+        "LCP": {
+          "histogram": [{
+            "start": 0,
+            "end": 2500,
+            "density": 93.31
+          }, {
+            "start": 2500,
+            "end": 4000,
+            "density": 4.33
+          }, {
+            "start": 4000,
+            "density": 2.36
+          }],
+          "value": 1421
         }
       }
-    },
-
-    {
+    }, {
       "origin": "https://vuejs.org",
       "metrics": {
+        "FID": {
+          "histogram": [{
+            "start": 0,
+            "end": 100,
+            "density": 96.68
+          }, {
+            "start": 100,
+            "end": 300,
+            "density": 2.62
+          }, {
+            "start": 300,
+            "density": 0.7
+          }],
+          "value": 21
+        },
         "LCP": {
           "histogram": [{
             "start": 0,
             "end": 2500,
-            "density": 0.8596385542168664
+            "density": 88.89
           }, {
             "start": 2500,
             "end": 4000,
-            "density": 0.08373493975903605
+            "density": 7.32
           }, {
             "start": 4000,
-            "density": 0.05662650602409588
+            "density": 3.79
           }],
-          "percentiles": {
-            "p75": 1711
-          }
+          "value": 1565
         },
         "CLS": {
           "histogram": [{
             "start": "0.00",
             "end": "0.10",
-            "density": 0.654498044328552
+            "density": 74.79
           }, {
             "start": "0.10",
             "end": "0.25",
-            "density": 0.25293350717079505
+            "density": 18.95
           }, {
             "start": "0.25",
-            "density": 0.09256844850065184
+            "density": 6.27
           }],
-          "percentiles": {
-            "p75": "0.14"
-          }
+          "value": "0.10"
         },
         "FCP": {
           "histogram": [{
             "start": 0,
             "end": 1000,
-            "density": 0.5835266821345682
+            "density": 62.26
           }, {
             "start": 1000,
             "end": 3000,
-            "density": 0.32482598607888463
+            "density": 31.32
           }, {
             "start": 3000,
-            "density": 0.09164733178654262
+            "density": 6.42
           }],
-          "percentiles": {
-            "p75": 1533
-          }
-        },
-        "FID": {
-          "histogram": [{
-            "start": 0,
-            "end": 100,
-            "density": 0.9562043795620442
-          }, {
-            "start": 100,
-            "end": 300,
-            "density": 0.03284671532846716
-          }, {
-            "start": 300,
-            "density": 0.010948905109489062
-          }],
-          "percentiles": {
-            "p75": 21
-          }
+          "value": 1368
         }
       }
     }

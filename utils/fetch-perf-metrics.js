@@ -22,7 +22,16 @@ async function fetchPerformanceMetrics(from, sites, body) {
         [from]: result.data.record.key[from],
         metrics: Object.fromEntries(
           Object.entries(result.data.record.metrics)
-            .map(b => {b[0] = metrics[b[0]]; return b})
+            .map(metric => {
+              metric[1].value = metric[1].percentiles.p75;
+              delete metric[1].percentiles;
+              metric[1].histogram = metric[1].histogram.map(h => {
+                h.density = parseFloat((h.density * 100).toFixed(2));
+                return h;
+              });
+              metric[0] = metrics[metric[0]];
+              return metric;
+            })
         ),
       }));
       return results;
