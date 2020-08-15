@@ -4,7 +4,7 @@
   "description": "Given a set of urls returns its core web vitals metrics.",
   "main": "index.js",
   "scripts": {
-    "start-dev": "CRUX_TOKEN=[CRUX_TOKEN] nodemon dev/server.js"
+    "start-dev": "nodemon dev/server.js"
   },
   "repository": {
     "type": "git",
@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/pazguille/web-vitals-api#readme",
   "dependencies": {
-    "axios": "^0.19.2"
+    "axios": "^0.19.2",
+    "joi": "^17.2.0"
   },
   "devDependencies": {
     "express": "^4.17.1",
