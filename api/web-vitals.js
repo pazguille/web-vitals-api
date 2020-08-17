@@ -42,5 +42,5 @@ module.exports = async (req, res) => {
   };
 
   const results = await fetchPerfMetrics(from, sites, body);
-  res.status(200).json(results || {});
+  res.status(results.code || 200).json(results);
 }

@@ -9,9 +9,9 @@ const metrics = {
   cumulative_layout_shift: 'CLS',
 };
 
-async  function fetchVitalsFromCrux(from, site, body) {
+async function fetchVitalsFromCrux(from, site, body) {
   return axios.post(API_URL, { ...body, [from]: site }, { params: query })
-    .catch(err => console.log('ERROR!', err.response && err.response.data));
+    .catch(err => { throw err.response.data.error; });
 }
 
 async function fetchPerformanceMetrics(from, sites, body) {
@@ -36,7 +36,10 @@ async function fetchPerformanceMetrics(from, sites, body) {
       }));
       return results;
     })
-    .catch(err => console.log('ERROR!', err.message));
+    .catch(err => {
+      console.log('ERROR - fetchPerformanceMetrics', err);
+      return err;
+    });
 }
 
 module.exports = fetchPerformanceMetrics;
