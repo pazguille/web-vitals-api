@@ -6,7 +6,7 @@ const fetchPerfMetrics = require('../utils/fetch-perf-metrics');
 const schema = Joi.object({
   q: Joi.string().required(),
   country: Joi.string().required().default('br'),
-  results: Joi.number().min(1).default('10'),
+  results: Joi.number().min(1).default(10),
 });
 
 const googleQueryparams = {
