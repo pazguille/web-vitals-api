@@ -1,4 +1,3 @@
-const url = require('url');
 const axios = require('axios');
 const cheerio = require('cheerio');
 const querystring = require('querystring');
@@ -19,11 +18,12 @@ function extractResults(body) {
       const href = node.parent().attr('href');
       if (href) {
         const link = new URL(href).searchParams.get('q');
+        const domain = new URL(link).hostname;
         const result = {
           position: i+1,
           title: node.text(),
           link,
-          domain: url.parse(link).hostname,
+          domain,
         }
         results.push(result);
       }

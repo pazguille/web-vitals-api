@@ -45,7 +45,7 @@ module.exports = async (req, res) => {
 
   seoResults.forEach(result => {
     const crux = cruxResults.find(metrics => metrics.url === result.link);
-    result.metrics = crux && crux.metrics;
+    result.metrics = crux?.metrics;
   });
 
   res.status(200).json(seoResults);

@@ -15,6 +15,7 @@ async function fetchVitalsFromCrux(from, site, body) {
 }
 
 async function fetchPerformanceMetrics(from, sites, body) {
+  body.metrics = Object.keys(metrics);
   const promises = sites.map(site => fetchVitalsFromCrux(from, site, body));
   return Promise.allSettled(promises)
     .then(response => {
@@ -23,6 +24,7 @@ async function fetchPerformanceMetrics(from, sites, body) {
           const data = result.value.data;
           return {
             [from]: data.record.key[from],
+            originalUrl: data?.urlNormalizationDetails?.originalUrl,
             metrics: Object.fromEntries(
               Object.entries(data.record.metrics)
                 .map(metric => {

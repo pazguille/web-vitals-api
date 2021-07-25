@@ -1,10 +1,10 @@
 {
   "name": "web-vitals-api",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Given a set of urls returns its core web vitals metrics.",
   "main": "index.js",
   "scripts": {
-    "start-dev": "nodemon dev/server.js"
+    "dev": "nodemon dev/server.js"
   },
   "repository": {
     "type": "git",
@@ -17,12 +17,12 @@
   },
   "homepage": "https://github.com/pazguille/web-vitals-api#readme",
   "dependencies": {
-    "axios": "^0.19.2",
-    "cheerio": "^1.0.0-rc.3",
-    "joi": "^17.2.0"
+    "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.10",
+    "joi": "^17.4.1"
   },
   "devDependencies": {
     "express": "^4.17.1",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.12"
   }
 }
