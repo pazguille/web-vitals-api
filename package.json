@@ -4,7 +4,7 @@
   "description": "Given a set of urls returns its core web vitals metrics.",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon dev/server.js"
+    "dev": "CRUX_TOKEN=AIzaSyBXMDllIyGfdCHjx-gxnqPDHgU5cGDtCw0 nodemon dev/server.js"
   },
   "repository": {
     "type": "git",
@@ -24,5 +24,8 @@
   "devDependencies": {
     "express": "^4.17.1",
     "nodemon": "^2.0.12"
+  },
+  "engines": {
+    "node": ">=14.x"
   }
 }
