@@ -7,6 +7,7 @@ const metrics = {
   largest_contentful_paint: 'LCP',
   first_input_delay: 'FID',
   cumulative_layout_shift: 'CLS',
+  interaction_to_next_paint: 'INP',
 };
 
 async function fetchVitalsFromCrux(from, site, body) {
