@@ -38,7 +38,7 @@ module.exports = async (req, res) => {
 
   const body = {
     formFactor: query.device,
-    effectiveConnectionType: query.connection,
+    // effectiveConnectionType: query.connection,
   };
 
   const results = await fetchPerfMetrics(from, sites, body);

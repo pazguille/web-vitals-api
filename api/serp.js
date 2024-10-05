@@ -40,7 +40,7 @@ module.exports = async (req, res) => {
   const urls = seoResults.map(result => result.link);
   const cruxResults = await fetchPerfMetrics('url', urls, {
     formFactor: 'PHONE',
-    effectiveConnectionType: '4G',
+    // effectiveConnectionType: '4G',
   });
 
   seoResults.forEach(result => {

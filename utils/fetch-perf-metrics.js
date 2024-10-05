@@ -5,7 +5,6 @@ const query = { key: process.env.CRUX_TOKEN };
 const metrics = {
   first_contentful_paint: 'FCP',
   largest_contentful_paint: 'LCP',
-  first_input_delay: 'FID',
   cumulative_layout_shift: 'CLS',
   interaction_to_next_paint: 'INP',
 };
